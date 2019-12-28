@@ -8,11 +8,13 @@ returns them in an array (order not important). The functon should work for inte
 strings.
 
 Examples
-[ 2 , 3 , 2 , 5 , 6 , 7 , 2 ] [ 2 ] ➞
-[ 1 , 2 , 3 , 3 , "a" , "b" , "b" , "c" ] [3 , "b" ] ➞
-[ "it" , "keeps" , "coding" , "on" , "or" , "it" , "gets" , "the" , "hose" ] [ "it" ] ➞
+[ 2 , 3 , 2 , 5 , 6 , 7 , 2 ]  ➞ [ 2 ]
+
+[ 1 , 2 , 3 , 3 , "a" , "b" , "b" , "c" ]  ➞ [3 , "b" ]
+[ "it" , "keeps" , "coding" , "on" , "or" , "it" , "gets" , "the" , "hose" ]  ➞ [ "it" ]
 
 Notes
+
 Don't let integers become strings and/or string become integers in the result.
 
 2)Object Diffing
