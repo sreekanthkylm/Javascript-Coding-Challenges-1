@@ -1,0 +1,25 @@
+<script>
+function mostRepeatedElement(arr) {
+  if (!Array.isArray(arr) || arr.length < 1) {
+    return "Sorry, you can only pass an array of items to this function."
+  }
+  var obj = {}, mostRep = 0, items = [];
+  arr.forEach(element => {
+    if (!obj[element]) {
+      obj[element] = 1;
+    } else {
+      obj[element]++;
+    }
+    if (obj[element] > mostRep) {
+      mostRep = obj[element];
+      items = [element];
+    } else if (obj[element] === mostRep) {
+      items.push(element);
+    }
+  });
+  return items;
+}
+console.log(mostRepeatedElement([ 2 , 3 , 2 , 5 , 6 , 7 , 2 ]));
+console.log(mostRepeatedElement([ 1 , 2 , 3 , 3 , "a" , "b" , "b" , "c" ])); 
+console.log(mostRepeatedElement([ "it","keeps","coding","on","or","it","gets","the","hose"]));
+</script>
