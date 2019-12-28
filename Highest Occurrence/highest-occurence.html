@@ -1,34 +1,43 @@
 <script>
-function mostRepeatedElement(arr) {
-  if (!Array.isArray(arr) || arr.length < 1) {
-    return "Sorry, you can only pass an array of items to this function."
+
+  function mostRepeatedElement(arr) {
+  
+    // Make sure array is provided to check.
+    if (!Array.isArray(arr) || arr.length < 1) {
+      return "Sorry, you can only pass an array of items to this function."
+    }
+  
+    var obj = {}, mostRep = 0, items = [];
+    
+    // Loop through the array
+    arr.forEach(element => {
+      if (!obj[element]) {
+        obj[element] = 1;
+      } else {
+        obj[element]++;
+      }
+      if (obj[element] > mostRep) {
+        mostRep = obj[element];
+        items = [element];
+      } else if (obj[element] === mostRep) {
+        items.push(element);
+      }
+    });
+  
+    // Return the most repeated element/s
+    return items;
   }
-  var obj = {}, mostRep = 0, items = [];
-  arr.forEach(element => {
-    if (!obj[element]) {
-      obj[element] = 1;
-    } else {
-      obj[element]++;
-    }
-    if (obj[element] > mostRep) {
-      mostRep = obj[element];
-      items = [element];
-    } else if (obj[element] === mostRep) {
-      items.push(element);
-    }
-  });
-  return items;
-}
-console.log("Input");
-console.log("[ 2 , 3 , 2 , 5 , 6 , 7 , 2 ]");
-console.log("Output");
-console.log(mostRepeatedElement([ 2 , 3 , 2 , 5 , 6 , 7 , 2 ]));
-console.log("Input");
-console.log('[ 1 , 2 , 3 , 3 , "a" , "b" , "b" , "c" ]');
-console.log("Output");
-console.log(mostRepeatedElement([ 1 , 2 , 3 , 3 , "a" , "b" , "b" , "c" ])); 
-console.log("Input");
-console.log('[ "it","keeps","coding","on","or","it","gets","the","hose"]');
-console.log("Output");
-console.log(mostRepeatedElement([ "it","keeps","coding","on","or","it","gets","the","hose"]));
-</script>
+  console.log("Input");
+  console.log("[ 2 , 3 , 2 , 5 , 6 , 7 , 2 ]");
+  console.log("Output");
+  console.log(mostRepeatedElement([ 2 , 3 , 2 , 5 , 6 , 7 , 2 ]));
+  console.log("Input");
+  console.log('[ 1 , 2 , 3 , 3 , "a" , "b" , "b" , "c" ]');
+  console.log("Output");
+  console.log(mostRepeatedElement([ 1 , 2 , 3 , 3 , "a" , "b" , "b" , "c" ])); 
+  console.log("Input");
+  console.log('[ "it","keeps","coding","on","or","it","gets","the","hose"]');
+  console.log("Output");
+  console.log(mostRepeatedElement([ "it","keeps","coding","on","or","it","gets","the","hose"]));
+  </script>
+  
