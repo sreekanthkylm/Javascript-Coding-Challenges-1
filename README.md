@@ -1,7 +1,7 @@
 # Javascript Coding Challenges
  A collection of JavaScript coding challenges
 
-1)Find Highest Occurrence
+## 1)Find Highest Occurrence
 
 Create a functon that takes an array, fnds the most repeated elements within the array and
 returns them in an array (order not important). The functon should work for integers and
@@ -11,13 +11,14 @@ Examples
 [ 2 , 3 , 2 , 5 , 6 , 7 , 2 ]  ➞ [ 2 ]
 
 [ 1 , 2 , 3 , 3 , "a" , "b" , "b" , "c" ]  ➞ [3 , "b" ]
+
 [ "it" , "keeps" , "coding" , "on" , "or" , "it" , "gets" , "the" , "hose" ]  ➞ [ "it" ]
 
 Notes
 
 Don't let integers become strings and/or string become integers in the result.
 
-2)Object Diffing
+## 2)Object Diffing
 
 Background
 
